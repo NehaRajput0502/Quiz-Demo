@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Taskbar/Header -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Logo</a>
+            <a class="navbar-brand" href="#">Quiz System</a>
+            <button id="theme-toggle" class="btn btn-outline-light">Switch Mode</button>
+        </div>
+    </nav>
+
+    
+    <div class="container-fluid mt-4 d-flex" style="padding:0;">
+       <!-- Left Toolbar -->
+        <div class="toolbar shadow-lg p-3" id="toolbar" style="width: 300px; position: static; top: 56px; height: 37vh; background: #fff; overflow-y: auto;">
+            <h4 class="text-primary text-center">Quiz Categories</h4>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="#">Basic</a></li>
+                <li class="list-group-item"><a href="#">Intermediate</a></li>
+                <li class="list-group-item"><a href="#">Advanced</a></li>
+                <li class="list-group-item"><a href="#">Miscellaneous</a></li>
+            </ul><br>
+            <h4 class="text-primary text-center">More</h4>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="#">Quizes</a></li>
+            </ul>
+        </div> 
+        
+        <!-- Main Content -->
+        <div class="container mt-5" style="margin-left: 50px;">
+            <div class="row">
+                <!-- Left Sidebar (Quiz Info) -->
+                <div class="col-md-4">
+                    <div class="card shadow-lg p-3">
+                        <h4 class="text-primary">Info</h4>
+                        <p>Welcome to the quiz! Answer the questions carefully.</p>
+                    </div>
+                </div>
+                
+                <!-- Right Quiz Section -->
+                <div class="col-md-8 d-flex align-items-end flex-column">
+                    <div class="card shadow-lg mt-auto w-100">
+                        <div class="card-body text-center">
+                            <h2 class="text-primary">HTML Quiz</h2>
+                            <p id="question" class="fw-bold mt-3"></p>
+                            <div id="options" class="mt-3"></div>
+                            <button id="next-btn" class="btn btn-primary mt-3" style="display:none;">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="html.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
